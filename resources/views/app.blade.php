@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+
+        @yield('styles')
     </head>
 
     <body>
@@ -20,5 +22,7 @@
         @include('layout/modals/restore')
         @include('layout/modals/feedback')
         @include('layout/modals/subscribe')
+
+        @yield('scripts')
     </body>
 </html>
