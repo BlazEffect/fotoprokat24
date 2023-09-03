@@ -62,7 +62,7 @@
         }
     }
 
-    // .banners__arrow-next
+    // .banners__arrow-next, .banners__arrow-prev
     &__arrow-next, &__arrow-prev {
         position: absolute;
         top: 50%;
@@ -75,6 +75,7 @@
 
         cursor: pointer;
 
+        // .banners__arrow-next::before
         &::before {
             content: "";
             position: absolute;
@@ -88,18 +89,22 @@
         }
     }
 
+    // .banners__arrow-next
     &__arrow-next {
         right: 20px;
 
+        // .banners__arrow-next::before
         &::before {
             left: 8px;
             transform: rotate(45deg);
         }
     }
 
+    // .banners__arrow-prev
     &__arrow-prev {
         left: 20px;
 
+        // .banners__arrow-prev::before
         &::before {
             left: 11px;
             transform: rotate(-135deg);

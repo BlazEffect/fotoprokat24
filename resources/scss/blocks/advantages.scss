@@ -1,6 +1,7 @@
 .advantages {
     background-color: #F5F5F5;
 
+    // .advantages__container
     &__container {
         display: flex;
         justify-content: space-between;
@@ -14,6 +15,7 @@
     padding-top: 44.25px;
     padding-bottom: 45.75px;
 
+    // .advantage__text
     &__text {
         margin-left: 19px;
     }
