@@ -526,3 +526,7 @@
 @section('footer')
     @include('layout/footer')
 @endsection
+
+@section('scripts')
+    @vite('resources/js/pages/main.js')
+@endsection
