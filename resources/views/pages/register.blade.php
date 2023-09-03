@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('styles')
+    @vite('resources/scss/pages/register.scss')
+@endsection
+
 @section('header')
     @include('layout/header')
 @endsection
