@@ -1,0 +1,20 @@
+.advantages {
+    background-color: #F5F5F5;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.advantage {
+    display: flex;
+    align-items: center;
+
+    padding-top: 44.25px;
+    padding-bottom: 45.75px;
+
+    &__text {
+        margin-left: 19px;
+    }
+}

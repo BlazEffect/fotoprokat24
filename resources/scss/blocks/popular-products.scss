@@ -1,0 +1,96 @@
+.popular-products {
+    margin-top: 96px;
+
+    // .popular-products__list
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 26px;
+    }
+}
+
+.products-list {
+    // .products-list__product
+    &__product {
+        border: 1px solid #EFEFEF;
+    }
+}
+
+.product {
+    // .product__action-buttons--left
+    &__action-buttons--left {
+        margin: 21px 21px 0 0;
+        float: right;
+
+        & a {
+            display: block;
+            margin-bottom: 17px;
+            position: relative;
+        }
+    }
+
+    // .product__action-buttons--bottom
+    &__action-buttons--bottom {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-weight: bold;
+        margin: 21px 0;
+    }
+
+    // .product__image
+    &__image {
+        display: flex;
+        justify-content: flex-end;
+        padding: 24px 20px 30px 0;
+    }
+
+    // .product__info
+    &__info {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    // .product__vendor
+    &__vendor {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    // .product__price-list
+    &__price-list {
+        display: flex;
+        font-size: 14px;
+    }
+
+    // .product__price-item
+    &__price-item {
+        padding: 17px 14px 13px;
+        border: 1px solid #EFEFEF;
+        text-align: center;
+    }
+}
+
+.action-button__show-more {
+    height: 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 10px 24px;
+    border-radius: 180px;
+    font-weight: bold;
+}
+
+.action-button__add-basket svg {
+    margin-right: 9px;
+}
+
+.action-button__add-basket {
+    height: 40px;
+    color: white;
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px 24px;
+    border-radius: 180px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}

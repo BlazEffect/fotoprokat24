@@ -1,0 +1,27 @@
+.find-block {
+    margin-top: 93px;
+
+    // .find-block__text
+    &__text {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // .action-buttons__catalog
+    &__catalog-link {
+        background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+        border-radius: 100px;
+        //opacity: 0.75;
+        //filter: blur(5px);
+        padding: 12px 54px;
+        color: white;
+        font-size: 14px;
+        margin-top: 24px;
+    }
+}

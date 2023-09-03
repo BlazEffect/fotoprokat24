@@ -1,0 +1,34 @@
+.register-block {
+    margin-top: 43px;
+}
+
+.register-form {
+    // .register-form__step
+    &__step {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        & > .form-control {
+            flex: 49%;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 19px;
+    }
+
+    &__continue {
+        color: white;
+        width: 300px;
+    }
+
+    &__submit {
+        width: 300px;
+    }
+}

@@ -1,0 +1,119 @@
+.footer {
+    margin-top: 100px;
+}
+
+.upper-footer {
+    background: url("/public/assets/images/footer/background.jpg");
+    padding: 15px 0;
+    color: white;
+
+    // .upper-footer__container
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.subscribe {
+    // .subscribe-block
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 50%;
+        margin-right: 40px;
+
+        // .subscribe-block__text
+        &__text {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    // .subscribe-form
+    &-form {
+        // .subscribe-form__input
+        &__input {
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+}
+
+.feedback__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    // .feedback__link:hover
+    &:hover {
+        color: $liteGreenColor;
+    }
+
+    // .feedback__link:hover > svg
+    &:hover > svg {
+        fill: $liteGreenColor;
+    }
+}
+
+.bottom {
+    // .bottom-footer
+    &-footer {
+        display: flex;
+        margin-top: 30px;
+    }
+
+    // .bottom-info
+    &-info {
+        margin-right: 50px;
+    }
+
+    // .bottom-navigation
+    &-navigation {
+        display: flex;
+        gap: 50px;
+        margin-right: 50px;
+
+        // .bottom-navigation__header
+        &__header {
+            margin-bottom: 10px;
+            text-transform: inherit;
+            text-align: inherit;
+        }
+
+        &__item {
+            margin-bottom: 8px;
+            line-height: 22px;
+            color: #545454;
+        }
+    }
+
+    // .bottom-logo
+    &-logo {
+        font-weight: 700;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    // .bottom-description
+    &-description {
+        margin-bottom: 30px;
+    }
+
+    // .bottom-contacts
+    &-contacts {
+        // .bottom-contacts__header
+        &__header {
+            margin-bottom: 10px;
+            text-transform: inherit;
+            text-align: inherit;
+        }
+
+        // .bottom-contacts__text
+        &__text {
+            line-height: 28px;
+            color: #545454;
+        }
+    }
+}

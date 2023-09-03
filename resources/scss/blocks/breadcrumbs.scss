@@ -1,0 +1,15 @@
+.breadcrumbs {
+    margin-top: 47px;
+
+    // .breadcrumbs__list
+    &__list {
+        display: flex;
+        font-size: 14px;
+    }
+
+    // .breadcrumbs__item:after
+    &__item:not(:last-child):after {
+        content: '/';
+        margin: 0 5px;
+    }
+}

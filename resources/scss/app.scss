@@ -1,0 +1,229 @@
+@use "sass:math";
+
+@import "base/mixins";
+
+@import "fonts/fonts";
+
+$mainColor: #000;
+$greyColor: #75758a;
+$liteGreyColor: #e3e3e3;
+$greenColor: #60b021;
+$liteGreenColor: #b0ea1a;
+
+$fontFamily: 'Ubuntu-Regular';
+$fontSize: rem(16); // размер шрифта по умолчанию
+
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1600;
+// Общий отступ у контейнера
+$containerPadding: 270;
+
+// Ширина страбатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+@import "base/null";
+
+[class*="__container"] {
+    @if ($maxWidthContainer > 0) {
+        max-width: rem($maxWidthContainer);
+        box-sizing: content-box;
+        margin: 0 auto;
+    }
+
+    @if ($containerPadding > 0) {
+        @media (min-width: $mobile) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
+    }
+}
+
+[class*="__header"] {
+    margin-bottom: 27px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.page-title__header {
+    text-align: inherit;
+    font-size: 30px;
+    margin-top: 14px;
+}
+
+.text-shadow {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.lime-background {
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+}
+
+.white-background {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/*.blur-lime-background {
+    background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+    opacity: 0.75;
+    filter: blur(5px);
+}*/
+
+.background-color-text {
+    background: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.animated-link {
+    // .animated-link::after
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 0;
+        height: 2px;
+        transition: width .2s ease-in-out;
+        background: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+    }
+
+    // .animated-link:hover
+    &:hover {
+        color: #60B021;
+        transition: all .2s ease-out;
+
+        // .animated-link:hover > svg
+        & > svg {
+            fill: #60B021;
+        }
+
+        // .animated-link:hover::after
+        &::after {
+            width: 100%;
+            transition: width .2s ease-in-out;
+        }
+    }
+}
+
+.form {
+    &-control {
+        position: relative;
+    }
+
+    // .form__input
+    &-input {
+        height: 75px;
+        width: 100%;
+        border: 1px solid $liteGreyColor;
+
+        font-weight: bold;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        position: relative;
+
+        padding-left: 20px;
+        padding-top: 20px;
+
+        &:focus {
+            border: 2px solid transparent;
+            border-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+            border-image-slice: 1;
+
+            & ~ .form-label {
+                top: 30%;
+            }
+        }
+
+        &:not(:placeholder-shown) ~ .form-label {
+            top: 30%;
+        }
+
+        &[required] ~ .form-label:after {
+            content: '*';
+            color: $greenColor;
+            margin-left: 5px;
+        }
+    }
+
+    // .form__label
+    &-label {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translate(0, -50%);
+        z-index: 1;
+        transition: all .5s ease;
+        font-size: 14px;
+    }
+}
+
+.button {
+    height: 50px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 17px 0;
+    text-align: center;
+}
+
+.darkening-main {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 16;
+
+    background-color: rgb(117 117 138 / 75%);
+}
+
+.green-text {
+    color: $greenColor;
+}
+
+.light-green-text {
+    color: $liteGreenColor;
+}
+
+.black-text {
+    color: $mainColor;
+}
+
+.grey-text {
+    color: $greyColor;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+@import "blocks/header";
+
+@import "blocks/breadcrumbs";
+
+@import "blocks/popular-products";
+@import "blocks/find-block";
+
+@import "blocks/login-popup";
+
+@import "blocks/banners";
+@import "blocks/advantages";
+
+@import "blocks/register";
+
+@import "blocks/footer";

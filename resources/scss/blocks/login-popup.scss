@@ -1,0 +1,110 @@
+.auth-popup {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+
+    background-color: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+    padding: 46px 30px 30px 30px;
+
+    z-index: 17;
+
+    max-width: 462px;
+    width: 100%;
+
+    display: none;
+
+    // .auth-popup.auth-popup--open
+    &.auth-popup--open {
+        display: block;
+    }
+
+    // .auth-popup__close-button
+    &__close-button {
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        background-color: $mainColor;
+        border-radius: 15px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        // .auth-popup__close-button:before
+        &:before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: 4px;
+            width: 16px;
+            height: 2px;
+            background-color: #fff;
+            transform: rotate(45deg);
+        }
+
+        // .auth-popup__close-button:after
+        &:after {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: 4px;
+            width: 16px;
+            height: 2px;
+            background-color: #fff;
+            transform: rotate(135deg);
+        }
+    }
+
+    // .auth-popup__header
+    &__header {
+        font-size: 16px;
+        text-transform: none;
+    }
+}
+
+.auth-form {
+    // .auth-form__login-block
+    &__login-block {
+        margin-bottom: 15px;
+    }
+
+    // .auth-form__login-block
+    &__password-block {
+        margin-bottom: 17px;
+    }
+
+    a.auth-form__change-password-link {
+        text-decoration-line: underline;
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 19px;
+    }
+
+    // .auth-form__remember-label
+    &__remember-label {
+        font-size: 14px;
+    }
+
+    // .auth-form__buttons
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 28px;
+        gap: 15px;
+    }
+
+    // .auth-form__submit
+    &__submit {
+        color: white;
+        width: 200px;
+    }
+
+    // .auth-form__register-link
+    &__register-link {
+        width: 200px;
+    }
+}

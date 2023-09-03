@@ -1,0 +1,114 @@
+.basket-popup
+    display: none
+
+    // .basket-popup__wrapper
+    &__wrapper
+        margin: 10px 10px 0 10px
+
+    // .basket-popup__header
+    &__header
+        display: inline-block
+        font-size: 24px
+
+    // .basket-popup__close
+    &__close
+        position: absolute
+        cursor: pointer
+        right: 0
+        margin-right: 10px
+        width: 20px
+        height: 20px
+
+        // .basket-popup::before
+        &::before
+            content: ''
+            position: absolute
+            width: 2px
+            height: 20px
+            background-color: red
+            right: 10px
+            transform: rotate(135deg)
+
+        // .basket-popup::after
+        &::after
+            content: ''
+            position: absolute
+            width: 2px
+            height: 20px
+            background-color: red
+            right: 10px
+            transform: rotate(45deg)
+
+    // .basket-popup.basket-popup--show
+    &.basket-popup--show
+        display: block
+        position: fixed
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: white
+        width: 30%
+        height: max-content
+        z-index: 16
+        border-radius: 5px
+
+    // .basket-popup__products
+    &__products
+        margin-top: 20px
+
+    // .basket-popup__product
+    &__product
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        border-top: 1px grey solid
+
+        padding: 10px 0
+
+        // .basket-popup__product:last-child
+        &:last-child
+            border-bottom: 1px grey solid
+
+        // .basket-popup__product-price
+        &-price
+            text-align: end
+            margin-top: 10px
+            margin-right: 10px
+
+.order-block
+    text-align: center
+    margin-top: 20px
+    margin-bottom: 15px
+
+    // .order-block__info
+    &__info
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 20px
+
+    // .order-block__order-button
+    &__order-button
+        background-color: green
+        padding: 10px
+
+    // .order-block__input
+    &__input
+        background-color: #f8f8f8
+        border: 1px solid #dbdbdb
+        width: 60%
+
+.basket-product
+    // .basket-product__remove-product
+    &__remove-product
+        cursor: pointer
+        width: 20px
+        height: 20px
+
+        // .basket-product__remove-product > img
+        & > img
+            width: 20px
+
+.basket-empty
+    text-align: center
